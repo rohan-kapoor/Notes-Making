@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 const AddNote = ({handleAddNote}) => {
     const [noteText, setNoteText] = useState('');
-    const characterLimit = 200;
+    const characterLimit = 250;
 
     const handleChange = (event) => {
         if(characterLimit - event.target.value.length >= 0){
@@ -26,7 +26,7 @@ const AddNote = ({handleAddNote}) => {
         cols='10'
         placeholder='Type to add a note...'
         onChange={handleChange}
-        maxLength={200}
+        maxLength={250}
         ></textarea>
         <div className='note-footer'>
             <small>{characterLimit - noteText.length} Remaining</small>
